@@ -3422,8 +3422,8 @@ class reex(Coin):
     WIF_BYTE = bytes.fromhex("bd")
     GENESIS_HASH = (
         '00000c1b8abb8755561c46ea298cf725c940ca71409f7024bc3ad82fdb1bdc7f')
-    TX_COUNT = 384097
-    TX_COUNT_HEIGHT = 10000
+    TX_COUNT = 554438
+    TX_COUNT_HEIGHT = 274780
     TX_PER_BLOCK = 1
     RPC_PORT = 43211
     REORG_LIMIT = 100
