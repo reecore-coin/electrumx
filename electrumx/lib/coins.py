@@ -3410,11 +3410,13 @@ class Navcoin(Coin):
             import x13_hash
             return x13_hash.getPoWHash(header)
 
+# Source:https://github.com/reecore-coin/
 class reex(Coin):
 
     NAME = "REEX"
     SHORTNAME = "REEX"
     NET = "mainnet"
+    DESERIALIZER = lib_tx.DeserializerSegWit
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
     P2PKH_VERBYTE = bytes.fromhex("3d")
@@ -3422,12 +3424,12 @@ class reex(Coin):
     WIF_BYTE = bytes.fromhex("bd")
     GENESIS_HASH = (
         '00000c1b8abb8755561c46ea298cf725c940ca71409f7024bc3ad82fdb1bdc7f')
-    TX_COUNT = 554438
-    TX_COUNT_HEIGHT = 274780
+    TX_COUNT = 1673999
+    TX_COUNT_HEIGHT = 817072
     TX_PER_BLOCK = 1
     RPC_PORT = 43211
     REORG_LIMIT = 100
-    SESSIONCLS = DashElectrumX
+    SESSIONCLS = ReexElectrumX
     DAEMON = daemon.DashDaemon
 
     @classmethod
