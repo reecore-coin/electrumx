@@ -3430,8 +3430,10 @@ class reex(Coin):
     RPC_PORT = 43211
     REORG_LIMIT = 100
     SESSIONCLS = ReexElectrumX
-    DAEMON = daemon.DashDaemon
-
+    ESTIMATE_FEE = 0.00001
+    RELAY_FEE = 0.00001
+    DAEMON = daemon.FakeEstimateFeeDaemon
+   
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
